@@ -1,0 +1,189 @@
+{
+  "schema_version": "p1_scaffolding_public_results_v1",
+  "experiment": "worked-examples-faded-scaffolds",
+  "primary_result": "full_holdout",
+  "model": {
+    "model_factory": "olmo2_370M",
+    "base_checkpoint_sha256": "8d0732c9c431456c40e182b516c083fa6e9eb9c682f7f1b8f4558f2b5d6a9c9c",
+    "distribution": "not_included"
+  },
+  "training": {
+    "actual_scheduled_tokens_per_arm": 200278016,
+    "global_batch_tokens": 524288,
+    "gpus_per_arm": "2x H100",
+    "learning_rate": 0.00005,
+    "matched_token_budget_per_arm": 200000000,
+    "optimizer": "adamw",
+    "scheduler": "cosine_with_warmup",
+    "sequence_length": 2048,
+    "steps_per_arm": 382,
+    "total_scheduled_tokens": 801112064,
+    "warmup_steps": 200,
+    "weight_decay": 0.01
+  },
+  "evaluation": {
+    "bootstrap_samples": 5000,
+    "max_items": 0,
+    "max_new_tokens": 512,
+    "n_eval_items": 39155,
+    "n_family_clusters": 1393,
+    "pass_n": 8,
+    "permutation_samples": 5000,
+    "prompt": "bare problem only",
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "data": {
+    "hf_dataset": "hiyasvyas/worked-examples-metamath-v0",
+    "holdout": "eval/holdout_bare.jsonl",
+    "holdout_sha256": "3e69ee3096ae14a28dd3ecf55eb613e8f7f9633e6fdf8f525f9f7febd19f08bd",
+    "n_eval_items": 39155,
+    "n_family_clusters": 1393
+  },
+  "arms": {
+    "bare": {
+      "pass_at_8": 0.13487421785212617,
+      "pass_ratio_at_8": 0.05106627506065636,
+      "prediction_rows": 39155
+    },
+    "complete": {
+      "pass_at_8": 0.17300472481164603,
+      "pass_ratio_at_8": 0.0433086451283361,
+      "prediction_rows": 39155
+    },
+    "fade_ordered": {
+      "pass_at_8": 0.1758906908440812,
+      "pass_ratio_at_8": 0.04516664538373132,
+      "prediction_rows": 39155
+    },
+    "fade_shuffled": {
+      "pass_at_8": 0.1820712552675265,
+      "pass_ratio_at_8": 0.04586898225003192,
+      "prediction_rows": 39155
+    }
+  },
+  "comparisons": {
+    "complete_minus_bare": {
+      "pass_at_n": {
+        "ci95_high": 0.05043483152744134,
+        "ci95_low": 0.02619809419082781,
+        "diff": 0.038130506959519854,
+        "one_sided_p_left_greater": 0.0001999600079984003,
+        "two_sided_p": 0.0001999600079984003
+      },
+      "pass_ratio_at_n": {
+        "ci95_high": -0.0016029115313399742,
+        "ci95_low": -0.014072885918569866,
+        "diff": -0.0077576299323202655,
+        "one_sided_p_left_greater": 0.9952009598080384,
+        "two_sided_p": 0.01219756048790242
+      }
+    },
+    "complete_minus_fade_shuffled": {
+      "pass_at_n": {
+        "ci95_high": 0.0003226111327329934,
+        "ci95_low": -0.018635728647986922,
+        "diff": -0.009066530455880475,
+        "one_sided_p_left_greater": 0.9726054789042191,
+        "two_sided_p": 0.0609878024395121
+      },
+      "pass_ratio_at_n": {
+        "ci95_high": 0.001368444149932837,
+        "ci95_low": -0.006414818102436948,
+        "diff": -0.002560337121695824,
+        "one_sided_p_left_greater": 0.9042191561687662,
+        "two_sided_p": 0.1985602879424115
+      }
+    },
+    "fade_ordered_minus_bare": {
+      "pass_at_n": {
+        "ci95_high": 0.05231764939301095,
+        "ci95_low": 0.029636827433828502,
+        "diff": 0.04101647299195505,
+        "one_sided_p_left_greater": 0.0001999600079984003,
+        "two_sided_p": 0.0001999600079984003
+      },
+      "pass_ratio_at_n": {
+        "ci95_high": -0.000016049485043376664,
+        "ci95_low": -0.012092827313510997,
+        "diff": -0.005899629676925041,
+        "one_sided_p_left_greater": 0.9754049190161967,
+        "two_sided_p": 0.05378924215156969
+      }
+    },
+    "fade_ordered_minus_complete": {
+      "pass_at_n": {
+        "ci95_high": 0.012327579742290724,
+        "ci95_low": -0.006475925230558628,
+        "diff": 0.0028859660324351936,
+        "one_sided_p_left_greater": 0.27214557088582286,
+        "two_sided_p": 0.5482903419316136
+      },
+      "pass_ratio_at_n": {
+        "ci95_high": 0.005909346681608929,
+        "ci95_low": -0.0018293115981989085,
+        "diff": 0.0018580002553952241,
+        "one_sided_p_left_greater": 0.16256748650269945,
+        "two_sided_p": 0.3379324135172965
+      }
+    },
+    "fade_ordered_minus_fade_shuffled": {
+      "pass_at_n": {
+        "ci95_high": -0.001110518813456735,
+        "ci95_low": -0.011263692114195555,
+        "diff": -0.006180564423445282,
+        "one_sided_p_left_greater": 0.9914017196560688,
+        "two_sided_p": 0.020195960807838434
+      },
+      "pass_ratio_at_n": {
+        "ci95_high": 0.0012483409904936401,
+        "ci95_low": -0.0025915193034692684,
+        "diff": -0.0007023368663006002,
+        "one_sided_p_left_greater": 0.7708458308338332,
+        "two_sided_p": 0.46750649870025995
+      }
+    },
+    "fade_shuffled_minus_bare": {
+      "pass_at_n": {
+        "ci95_high": 0.05877478344573987,
+        "ci95_low": 0.035714748198231186,
+        "diff": 0.04719703741540033,
+        "one_sided_p_left_greater": 0.0001999600079984003,
+        "two_sided_p": 0.0001999600079984003
+      },
+      "pass_ratio_at_n": {
+        "ci95_high": 0.0005323953300257405,
+        "ci95_low": -0.011097020696824812,
+        "diff": -0.005197292810624441,
+        "one_sided_p_left_greater": 0.9642071585682863,
+        "two_sided_p": 0.07278544291141771
+      }
+    }
+  },
+  "conclusion": {
+    "best_pass_at_8": 0.1820712552675265,
+    "best_pass_at_8_arm": "fade_shuffled",
+    "ordered_fading_better_than_shuffled_supported": false,
+    "ordered_minus_complete_pass_at_8": {
+      "ci95_high": 0.012327579742290724,
+      "ci95_low": -0.006475925230558628,
+      "diff": 0.0028859660324351936,
+      "one_sided_p_left_greater": 0.27214557088582286,
+      "two_sided_p": 0.5482903419316136
+    },
+    "ordered_minus_shuffled_pass_at_8": {
+      "ci95_high": -0.001110518813456735,
+      "ci95_low": -0.011263692114195555,
+      "diff": -0.006180564423445282,
+      "one_sided_p_left_greater": 0.9914017196560688,
+      "two_sided_p": 0.020195960807838434
+    },
+    "ordered_vs_shuffled_schedule_effect_status": "not_identified_pending_roster_audit",
+    "scaffolded_arms_beat_bare_pass_at_8": true,
+    "shuffled_fading_better_than_ordered_supported": true
+  },
+  "code": {
+    "olmo_core_commit": "0f479cf0531192ae15eb973b35271a663a7d123b",
+    "release_note": "Infrastructure-specific branch and storage details are intentionally excluded."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "p1_scaffolding_model_summary_v1",
+  "model_factory": "olmo2_370M",
+  "base_checkpoint": {
+    "distribution": "not_included",
+    "model_pt_sha256": "8d0732c9c431456c40e182b516c083fa6e9eb9c682f7f1b8f4558f2b5d6a9c9c",
+    "model_pt_size_bytes": 1896136094
+  },
+  "final_checkpoints": {
+    "distribution": "not_included",
+    "step": 382,
+    "approximate_size_bytes_per_arm": 5400000000
+  },
+  "training": {
+    "precision": "bf16_parameters_fp32_reduction",
+    "data_parallelism": "FSDP"
+  }
+}

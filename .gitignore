@@ -1,0 +1,19 @@
+# Local runtime state
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Large or generated artifacts excluded from this release
+*.pt
+*.safetensors
+*.npy
+*.npz
+preds*.jsonl
+*.out
+*.err

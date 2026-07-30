@@ -1,0 +1,60 @@
+{
+  "schema_version": "p1_scaffolding_dataset_manifest_v1",
+  "hf_dataset": "hiyasvyas/worked-examples-metamath-v0",
+  "dataset_revision": "3d16357860e33f4906d7d1440d133052d4115b01",
+  "kind": "worked-examples",
+  "olmo_core_commit": "0f479cf0531192ae15eb973b35271a663a7d123b",
+  "files": [
+    {
+      "relative_path": "eval/holdout_bare.jsonl",
+      "sha256": "3e69ee3096ae14a28dd3ecf55eb613e8f7f9633e6fdf8f525f9f7febd19f08bd",
+      "size_bytes": 31490625
+    },
+    {
+      "relative_path": "tokenized/bare/shard-00000.npy",
+      "sha256": "cc59cc37c3c42e46ba9282bed623b11c3f242805776ae2e0ca8f72c0bdcf509d",
+      "size_bytes": 2793460
+    },
+    {
+      "relative_path": "tokenized/bare/label_mask-00000.npy",
+      "sha256": "550b7249026844dcd1fab4f7bb6cc8d8618d2922a00bc705d0e5572d79d9e48e",
+      "size_bytes": 698365
+    },
+    {
+      "relative_path": "tokenized/complete/shard-00000.npy",
+      "sha256": "e5a7e53e55012b7de5d8dadcd673e17e795d461310fc61d5e4423eba8268e01d",
+      "size_bytes": 9502156
+    },
+    {
+      "relative_path": "tokenized/complete/label_mask-00000.npy",
+      "sha256": "4428ce59a2f662b16c11c7a349b5f1314fbf067c107ce26a31994fc981446c23",
+      "size_bytes": 2375539
+    },
+    {
+      "relative_path": "tokenized/fade_ordered/shard-00000.npy",
+      "sha256": "e9c9ced6520bee3ff300ddc629855eb92cfd7e57114da4a9033928fad5476bd3",
+      "size_bytes": 48870844
+    },
+    {
+      "relative_path": "tokenized/fade_ordered/label_mask-00000.npy",
+      "sha256": "ee2401c78b6d344618402fbee941fef9bd8cfd8388a82b217c028161d01c2c90",
+      "size_bytes": 12217711
+    },
+    {
+      "relative_path": "tokenized/fade_shuffled/shard-00000.npy",
+      "sha256": "2737ae93386ccb33fff9bf2cacb52c3a5b49383a3262dad5e23aae7849a19c4f",
+      "size_bytes": 48870844
+    },
+    {
+      "relative_path": "tokenized/fade_shuffled/label_mask-00000.npy",
+      "sha256": "5196f355282323d43010a061e3d5fece035018907bd1a925dd4b0a6e66d1e217",
+      "size_bytes": 12217711
+    }
+  ],
+  "holdout": {
+    "relative_path": "eval/holdout_bare.jsonl",
+    "sha256": "3e69ee3096ae14a28dd3ecf55eb613e8f7f9633e6fdf8f525f9f7febd19f08bd",
+    "n_items": 39155,
+    "n_family_clusters": 1393
+  }
+}
