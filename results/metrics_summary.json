@@ -180,7 +180,7 @@
     },
     "ordered_vs_shuffled_schedule_effect_status": "not_identified_pending_roster_audit",
     "scaffolded_arms_beat_bare_pass_at_8": true,
-    "shuffled_fading_better_than_ordered_supported": true
+    "shuffled_fading_better_than_ordered_supported": false
   },
   "code": {
     "olmo_core_commit": "0f479cf0531192ae15eb973b35271a663a7d123b",

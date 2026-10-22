@@ -28,7 +28,7 @@ The stricter schedule comparison is `fade_ordered` versus `fade_shuffled`.
 
 Supported in this run.
 
-All three worked-example or scaffolded arms beat `bare` on the primary full-holdout Pass@8 metric.
+All three worked-example or scaffolded arms beat `bare` on the main full-holdout Pass@8 metric.
 
 ### H2: Ordered fading improves on complete worked examples.
 
@@ -92,7 +92,7 @@ At this token budget and evaluation protocol, worked-solution and scaffolded tra
 
 The result does not establish that a scheduled fading order adds value beyond using worked examples.
 
-The result also does not establish improved single-sample answer reliability, transfer to unseen families, or generalization outside this math benchmark.
+The result also does not establish improved single-sample answer reliability or generalization outside this math benchmark.
 
 ## Repository Contents
 
@@ -149,6 +149,6 @@ See [docs/reproducibility.md](docs/reproducibility.md) for the complete public r
 
 This is one base checkpoint and one training seed.
 
-It does not measure transfer to unseen problem families, error-type changes, or performance outside the evaluated problem distribution.
+It does not measure error-type changes or performance outside the evaluated problem distribution. 51 of the 1,393 holdout families also appear in the training build.
 
-The next experiment should use a roster-verified ordered and shuffled pair, add at least one training seed, and include an unseen-family transfer evaluation.
+The next experiment should use a roster-verified ordered and shuffled pair, add at least one training seed, and re-run the analysis without the 51 holdout families that also appear in training.
